@@ -106,7 +106,7 @@ library(ggplot2)
 library(multcompView)
 library(dplyr)
 
-GTL <- read_csv("data_soal_5.csv")
+GTL <- read_csv("GTL.csv")
 head(GTL)
 
 str(GTL)

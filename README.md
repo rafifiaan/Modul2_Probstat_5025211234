@@ -20,7 +20,7 @@ Seorang peneliti melakukan penelitian mengenai pengaruh aktivitas 𝐴 terhadap 
 
 Berdasarkan data pada tabel diatas, diketahui kadar saturasi oksigen dari responden ke-3 ketika belum melakukan aktivitas 𝐴 sebanyak 67, dan setelah melakukan aktivitas 𝐴 sebanyak 70.
 
-### 1Poin A
+### 1 Point A
 > Carilah standar deviasi dari data selisih pasangan pengamatan tabel di atas.
 
 *Pertama*, masukkan data yang telah ada ke dalam variabel sesuai pengelompokannya.
@@ -40,7 +40,6 @@ sd(difference)
 ```
 
 ![1PointA](https://user-images.githubusercontent.com/91828276/206914887-b5607b7d-4319-41e0-bbfd-a497c5eaa4ea.png)
-
 </br>
 
 ### 1 Point B
@@ -53,16 +52,14 @@ t.test(after, before, paired = TRUE)
 ```
 
 ![1PointB](https://user-images.githubusercontent.com/91828276/206914893-60281421-c040-4028-be2b-67716e514825.png)
-
 </br>
 
-### Poin C
+### 1 Point C
 >Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
 
 Berdasarkan hasil poin sebelumnya, diketahui bahwa nilai probabilitas dari uji 𝑡 (p-value) adalah 6.003e-05 atau 0.00006003. Karena nilai probabilitas tersebut lebih kecil dibandingkan tingkat signifikansi 𝛼 = 0.05, maka **hipotesis nol ditolak dan hipotesis alternatif diterima.** 
 
 Hal ini artinya sebelum dan sesudah melakukan aktivitas 𝐴 pada tingkat signifikansi 5%, terdapat pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen.
-
 </br>
 
 ## Nomor 2
@@ -78,7 +75,6 @@ Selanjutnya, digunakan sebuah package library BSDA untuk membuat solusi permasal
 install.packages("BSDA")
 library(BSDA)
 ```
-
 </br>
 
 ### 2 Point B
@@ -93,14 +89,12 @@ tsum.test(mean.x = 23500, s.x = 3900, n.x = 100)
 ![2PointB](https://user-images.githubusercontent.com/91828276/206915876-e08783dd-1817-4add-b195-55913cff8ab5.png)
 
 Sehingga dengan interval kepercayaan 95%, rata-rata jarak tempuh mobil per tahun berada di antara 22.726,16 km dan 24.273,84 km. Dengan interval kepercayaan 95% dan dari 100 responden, dapat dibuktikan bahwa rata-rata jarak tempuh mobil per thn lebih dari 20.000 km karena nilai p-value kurang dari tingkat signifikansi 𝛼 = 0.05.
-
 </br>
 
 ### 2 Point C
 >Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
 
 Dikarenakan nilai probabilitas tersebut lebih kecil dibandingkan tingkat signifikansi 𝛼 = 0.05, maka **hipotesis nol ditolak dan hipotesis alternatif diterima.** Sehingga, kesimpulan yang didapatkan yaitu bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
-
 </br>
 
 ## Nomor 3
@@ -135,7 +129,6 @@ tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19,
 ```
 
 ![3PointB](https://user-images.githubusercontent.com/91828276/206916717-e1bb864a-e0f7-4c7a-8c75-b15ce71a9ca8.png)
-
 </br>
 
 ### 3 Point C
@@ -155,7 +148,6 @@ plotDist(dist = 't', df = 2, col = "blue")
 ```
 
 ![3PointC](https://user-images.githubusercontent.com/91828276/206916721-23cf5648-99d6-475b-a388-6781a1af0a51.png)
-
 </br>
 
 ### 3 Point D
@@ -168,21 +160,18 @@ qchisq(p = 0.05, df = 2, lower.tail = FALSE)
 ```
 
 ![3PointD](https://user-images.githubusercontent.com/91828276/206916723-228629ef-0ec3-4ea6-a455-2ccb99cc79f5.png)
-
 </br>
 
 ### 3 Point E
 >Keputusan(3)
 
 Teori keputusan merupakan teori formal pengambilan keputusan di bawah ketidakpastian. Aksinya adalah `({a}\_{a∈A})` dengan kemungkinan konsekuensinya adalah `({c}_{c∈C})` (tergantung pada keadaan dan tindakan). Sehingga, keputusan dapat diperoleh dengan menggunakan fungsi `t.test`
-
 </br>
 
 ### 3 Point F
 >Kesimpulan(3)
 
 Dapat disimpulkan bahwa perbedaan rata-rata yang terjadi tidak ada jika dilihat dari uji statistik. Namun, akan ada (meski tidak signifikan) jika dipengaruhi oleh nilai kritikal.
-
 </br>
 
 ## Nomor 4
@@ -242,7 +231,6 @@ qqline(Group3$Length)
 ```
 
 ![4PointA4](https://user-images.githubusercontent.com/91828276/206918417-2379f19b-0b6d-4657-a6a8-631d36c7f8b7.png)
-
 </br>
 
 ### 4 Point B
@@ -257,7 +245,6 @@ bartlett.test(Length ~ Group, data = dataoneway)
 ![4PointB](https://user-images.githubusercontent.com/91828276/206918421-582b0ed0-1f3f-4974-a171-96eb075bca51.png)
 
 Dari hasil uji fungsi `bartlett.test()` didapatkan p-value sebesar 0.8054 yang lebih dari nilai 𝛼 = 0.05 sehingga asumsi kesamaan varians terpenuhi.
-
 </br>
 
 ### 4 Point C
@@ -271,8 +258,6 @@ anova(model1)
 ```
 
 ![4PointC](https://user-images.githubusercontent.com/91828276/206918424-9bccca33-e2a7-462b-a7f9-fec5b7868773.png)
-
-
 </br>
 
 ### 4 Point D
@@ -281,7 +266,6 @@ anova(model1)
 Melihat dari hasil yang didapatkan pada poin sebelumnya, pada taraf uji 5% didapatkan nilai p-value sebesar 0.0013. 
 
 Sehingga, terdapat perbedaan panjang kucing yang signifikan berdasarkan grupnya.
-
 </br>
 
 ### 4 Point E
@@ -296,7 +280,6 @@ TukeyHSD(aov(model1))
 ![4PointE](https://user-images.githubusercontent.com/91828276/206918426-ceafb36c-bc2d-4ce6-9ed4-cc5fdc64595b.png)
 
 Dari hasil uji Tukey, dapat dilihat kombinasi dari kelompok mana yang secara signifikan berbeda. Jika menggunakan 𝛼 = 5%, **perbedaan panjang kucing yang signifikan adalah grup 2 (Kucing Hitam) terhadap grup 1 (Kucing Oren) dan grup 3 (Kucing Putih)**.
-
 </br>
 
 ### 4 Point F
@@ -312,7 +295,6 @@ ggplot(dataoneway, aes(x = Group, y = Length)) + geom_boxplot(fill = "grey80", c
 ```
 
 ![4PointF](https://user-images.githubusercontent.com/91828276/206918428-049e520e-f030-4865-a7ef-8a504fba6d7c.png)
-
 </br>
 
 ## Nomor 5
@@ -338,7 +320,7 @@ GTL <- read_csv("GTL.csv")
 head(GTL)
 ```
 
-![5PointA1](https://user-images.githubusercontent.com/91828276/206919809-94e386e2-157c-4676-9a7d-335731286978.png)
+![5PointA1](https://user-images.githubusercontent.com/91828276/206921111-23bcf548-d7dc-4f8b-a058-109f64241c5a.png)
 
 *Ketiga*, lakukan observasi pada dataset.
 
@@ -346,7 +328,7 @@ head(GTL)
 str(GTL)
 ```
 
-![5PointA2](https://user-images.githubusercontent.com/91828276/206919813-19675403-59c4-47c9-ae1e-1f1c39f41f79.png)
+![5PointA2](https://user-images.githubusercontent.com/91828276/206921115-a4937d92-7333-4f27-b0d0-27759553e5b1.png)
 
 *Keempat*, lakukan viasualisasi dengan menggunakan simple plot dengan fungsi `qplot()` sebagai berikut.
 
@@ -354,7 +336,7 @@ str(GTL)
 qplot(x = Temp, y = Light, geom = "point", data = GTL) + facet_grid(.~Glass, labeller = label_both)
 ```
 
-![5PointA3](https://user-images.githubusercontent.com/91828276/206919815-4dd23b05-05b1-4489-979e-fbe4a12547b8.png)
+![5PointA3](https://user-images.githubusercontent.com/91828276/206921120-73ca8257-98e3-4055-86ab-fedc31e8dd82.png)
 
 </br>
 
